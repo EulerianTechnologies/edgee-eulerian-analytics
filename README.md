@@ -2,7 +2,7 @@
 
 Adds Eulerian Analytics tracking code to your Edgee. Supports many tracking features.
 
-== Description ==
+## Description
 
 > Connects Eulerian Analytics to Edgee
 > Easily add Eulerian Analytics to your web pages
@@ -31,7 +31,7 @@ Please visit Privacy Center in Eulerian Analytics to configure privacy
 management and data collection level depending on your specific compliance &
 privacy rules.
 
-== Installation ==
+## Installation
 
 ### How to install the module ###
 
@@ -48,7 +48,7 @@ Example :
 After a couple of minutes, you can log into your Eulerian Analytics account and view your site statistics.
 
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions 
 
 
 **How to enable Eulerian Analytics ?**
@@ -61,7 +61,7 @@ Check out the top of this page, first section provides the steps to add Eulerian
 To ask a question, suggest a feature, or provide feedback, [contact me directly](am@eulerian.com). Learn more about [Eulerian Analytics](https://www.eulerian.com/).
 
 
-== Changelog ==
+## Changelog 
 
 *Thank you to everyone who shares feedback for Eulerian Analytics!*
 
