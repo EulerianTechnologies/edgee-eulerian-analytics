@@ -1,0 +1,27 @@
+manifest-version = 1
+
+[component]
+name = "eulerian-analytics"
+version = "1.0.0"
+category = "data-collection"
+subcategory = "analytics"
+description = "Eulerian Analytics component"
+documentation = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
+repository = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
+wit-world-version = "0.4.0"
+
+[component.build]
+command = "npm install && npm run generate && npm run build"
+output_path = "./eulerian-analytics.wasm"
+
+[component.settings.trackingTarget]
+title = "Tracking Domain Target"
+type = "string"
+required = true
+description = "This is the name of domain target you are going to send the data to"
+
+[component.settings.website]
+title = "Name of the website"
+type = "string"
+required = true
+description = "Name of the website to which data will be sent"

@@ -1,0 +1,16 @@
+{
+  "name": "eulerian-analytics",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "./types/wit.d.ts",
+  "scripts": {
+    "generate": "npx @bytecodealliance/jco types wit/ -o types/",
+    "build": "npx @bytecodealliance/jco componentize src/index.js --wit wit -o eulerian-analytics.wasm -n data-collection -d all",
+    "test": "mocha",
+    "coverage": "c8 --src js --all -r text -r text-summary npm test"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "mocha": "^11.1.0"
+  }
+}
