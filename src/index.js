@@ -38,8 +38,8 @@ const buildEdgeeRequest = (payload, trackingTarget, website) => ({
   method: 'POST',
   url: `https://${trackingTarget}.eulerian.net/collector/${website}/`,
   headers: [
-    //['X-Forwarded-For', payload['ereplay-ip'] ],
-    //['User-Agent', payload['ereplay-ua'] ],
+    ['X-Forwarded-For', payload['ereplay-ip'] ],
+    ['User-Agent', payload['ereplay-ua'] ],
     ['Content-Type', 'application/json'],
   ],
   body: new URLSearchParams(payload).toString(),
