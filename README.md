@@ -2,7 +2,7 @@
 
 Adds Eulerian Analytics tracking code to your Edgee. Supports many tracking features.
 
-## Description
+## Description 
 
 > Connects Eulerian Analytics to Edgee
 > Easily add Eulerian Analytics to your web pages
@@ -64,6 +64,10 @@ To ask a question, suggest a feature, or provide feedback, [contact me directly]
 ## Changelog 
 
 *Thank you to everyone who shares feedback for Eulerian Analytics!*
+
+**20250219**
+
+* Add X-Forwarded-For & User-Agent headers
 
 **20250218**
 
