@@ -1,12 +1,12 @@
 /**
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeProtocolsDataCollection} EdgeeProtocolsDataCollection
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeRequest} EdgeeRequest
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Dict} Dict
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Event} Event
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").PageData} PageData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").TrackData} TrackData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").UserData} UserData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Context} Context
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").EdgeeComponentsDataCollection} EdgeeComponentsDataCollection
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").EdgeeRequest} EdgeeRequest
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").Dict} Dict
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").Event} Event
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").PageData} PageData
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").TrackData} TrackData
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").UserData} UserData
+ * @typedef {import("../types/interfaces/edgee-components-data-collection").Context} Context
  */
 
 /**
@@ -91,7 +91,7 @@ const buildPayload = (data, context) => {
   };
 };
 
-/** @type {EdgeeProtocolsDataCollection} */
+/** @type {EdgeeComponentsDataCollection} */
 export const dataCollection = {
 
   /**
