@@ -1,2 +1,2 @@
-import { EdgeeProtocolsDataCollection } from './interfaces/edgee-protocols-data-collection.js';
-export const dataCollection: typeof EdgeeProtocolsDataCollection;
+// world edgee:native/data-collection
+export * as dataCollection from './interfaces/edgee-components-data-collection.js'; // export edgee:components/data-collection
