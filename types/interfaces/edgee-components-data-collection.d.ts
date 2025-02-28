@@ -1,8 +1,7 @@
-export namespace EdgeeProtocolsDataCollection {
-  export function page(e: Event, settings: Dict): EdgeeRequest;
-  export function track(e: Event, settings: Dict): EdgeeRequest;
-  export function user(e: Event, settings: Dict): EdgeeRequest;
-}
+/** @module Interface edgee:components/data-collection **/
+export function page(e: Event, settings: Dict): EdgeeRequest;
+export function track(e: Event, settings: Dict): EdgeeRequest;
+export function user(e: Event, settings: Dict): EdgeeRequest;
 export type Dict = Array<[string, string]>;
 /**
  * # Variants
