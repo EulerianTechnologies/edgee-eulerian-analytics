@@ -2,13 +2,13 @@ manifest-version = 1
 
 [component]
 name = "eulerian-analytics"
-version = "1.0.2"
+version = "1.0.3"
 category = "data-collection"
 subcategory = "analytics"
 description = "Eulerian Analytics component"
 documentation = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
 repository = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
-wit-world-version = "0.5.0"
+wit-world-version = "0.4.0"
 
 [component.build]
 command = "npm install && npm run generate && npm run build"
