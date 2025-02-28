@@ -1,12 +1,12 @@
 /**
- * @typedef {import("../types/interfaces/edgee-components-data-collection").EdgeeComponentsDataCollection} EdgeeComponentsDataCollection
- * @typedef {import("../types/interfaces/edgee-components-data-collection").EdgeeRequest} EdgeeRequest
- * @typedef {import("../types/interfaces/edgee-components-data-collection").Dict} Dict
- * @typedef {import("../types/interfaces/edgee-components-data-collection").Event} Event
- * @typedef {import("../types/interfaces/edgee-components-data-collection").PageData} PageData
- * @typedef {import("../types/interfaces/edgee-components-data-collection").TrackData} TrackData
- * @typedef {import("../types/interfaces/edgee-components-data-collection").UserData} UserData
- * @typedef {import("../types/interfaces/edgee-components-data-collection").Context} Context
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeProtocolsDataCollection} EdgeeProtocolsDataCollection
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeRequest} EdgeeRequest
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Dict} Dict
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Event} Event
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").PageData} PageData
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").TrackData} TrackData
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").UserData} UserData
+ * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Context} Context
  */
 
 /**
@@ -72,16 +72,16 @@ const buildPayload = (data, context) => {
   }
   return {
     "ereplay-platform"  : "edgee",
-    "euidl"             : context.user.edgee_id,
+    "euidl"             : context.user.edgeeId,
     "url"               : data.url ?? "",
     "urlp"              : data.path ?? "",
     "rf"                : data.referrer ?? "",
-    "uid"               : data.user_id ?? context.user?.user_id ?? "",
+    "uid"               : data.user_id ?? context.user?.userId ?? "",
     "ereplay-ip"        : context.client.ip ?? "",
-    "ereplay-ua"        : context.client.user_agent ?? "",
+    "ereplay-ua"        : context.client.userAgent ?? "",
     "ereplay-time"      : Math.floor(Date.now() / 1000),
-    "ss"                : context.client.screen_width+"x"+context.client.screen_height,
-    "sd"                : context.client.screen_density ?? "",
+    "ss"                : context.client.screenWidth+"x"+context.client.screenHeight,
+    "sd"                : context.client.screenDensity ?? "",
     "category"          : data.category ?? "",
     "search"            : data.search ?? "",
     "title"             : data.title ?? "",
@@ -91,7 +91,7 @@ const buildPayload = (data, context) => {
   };
 };
 
-/** @type {EdgeeComponentsDataCollection} */
+/** @type {EdgeeProtocolsDataCollection} */
 export const dataCollection = {
 
   /**
