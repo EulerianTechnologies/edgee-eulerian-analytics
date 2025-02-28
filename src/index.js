@@ -73,7 +73,7 @@ const buildPayload = (data, context) => {
   return {
     "ereplay-platform"  : "edgee",
     "euidl"             : context.user.edgeeId,
-    "url"               : data.url ?? "",
+    "url"               : data.url ?? context.page?.url ?? "",
     "urlp"              : data.path ?? "",
     "rf"                : data.referrer ?? "",
     "uid"               : data.user_id ?? context.user?.userId ?? "",
