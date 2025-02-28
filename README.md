@@ -68,6 +68,8 @@ To ask a question, suggest a feature, or provide feedback, [contact me directly]
 **20250228**
 
 * Migrate from snake_case to camelCase
+* Better default for url parameter
+* Merge PR#1 for wit updates
 
 **20250219**
 
