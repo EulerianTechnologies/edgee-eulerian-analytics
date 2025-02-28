@@ -65,6 +65,10 @@ To ask a question, suggest a feature, or provide feedback, [contact me directly]
 
 *Thank you to everyone who shares feedback for Eulerian Analytics!*
 
+**20250228**
+
+* Migrate from snake_case to camelCase
+
 **20250219**
 
 * Add X-Forwarded-For & User-Agent headers
