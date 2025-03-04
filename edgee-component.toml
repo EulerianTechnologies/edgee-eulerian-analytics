@@ -1,8 +1,8 @@
 manifest-version = 1
 
 [component]
-name = "eulerian-analytics"
-version = "1.0.4"
+name = "Eulerian Analytics"
+version = "1.0.5"
 category = "data-collection"
 subcategory = "analytics"
 description = "Eulerian Analytics component"
