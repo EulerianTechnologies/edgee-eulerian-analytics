@@ -57,7 +57,9 @@ const buildEdgeeRequest = (payload, trackingTarget, website) => ({
  *
  * @returns {any}
  */
-const buildPayload = (data, context) => {
+const buildPayload = ( e ) => {
+  const data = e.data.val;
+  const context = e.context;
   const eventProperties = convertDict(data.properties);
   let utm = {};
   if ( context.campaign?.medium ) {
@@ -77,10 +79,11 @@ const buildPayload = (data, context) => {
   }
   let gdpr_consent = eventProperties?.gdpr_consent ?? "";
   if ( !gdpr_consent.length ) {
-    if ( data.consent === "granted" ) {
-      gdpr_consent = TCFV2_DEFAULT_GRANTED;
-    } else {
+    if ( (e?.consent === "denied")
+      || (e?.consent === "pending") ) {
       gdpr_consent = TCFV2_DEFAULT_PENDING_DENIED;
+    } else {
+      gdpr_consent = TCFV2_DEFAULT_GRANTED;
     }
   }
   return {
@@ -121,7 +124,7 @@ export const dataCollection = {
     settings = convertDict(settings);
 
     // build payload
-    const payload = buildPayload(e.data.val, e.context);
+    const payload = buildPayload(e);
 
     // build and return EdgeeRequest
     return buildEdgeeRequest(
@@ -144,7 +147,7 @@ export const dataCollection = {
     settings = convertDict(settings);
 
     // build payload
-    const payload = buildPayload(e.data.val, e.context);
+    const payload = buildPayload(e);
 
     // build and return EdgeeRequest
     return buildEdgeeRequest(
@@ -167,7 +170,7 @@ export const dataCollection = {
     settings = convertDict(settings);
 
     // build payload
-    const payload = buildPayload(e.data.val, e.context);
+    const payload = buildPayload(e);
 
     // build and return EdgeeRequest
     return buildEdgeeRequest(
