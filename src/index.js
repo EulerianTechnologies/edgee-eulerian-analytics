@@ -9,6 +9,11 @@
  * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Context} Context
  */
 
+/* All vendors + All purposes */
+const TCFV2_DEFAULT_GRANTED = "CQN3nOXQN3nOXEBAAAENCZCAAP_AAAAAAAqII7Nd_X__bX9n-_7_6ft0eY1f9_r37uQzDhfNs-8F3L_W_LwX32E7NF36tq4KmR4ku1bBIQNtHMnUDUmxaolVrzHsak2cpyNKJ_JkknsZe2dYGF9Pn9lD-YKZ7_5_9_f52T_9_9_-39z3_9f___dv_-__-vjf_599n_v9fV_78_Kf9______-____________8AAAAAA.II7Nd_X__bX9n-_7_6ft0eY1f9_r37uQzDhfNs-8F3L_W_LwX32E7NF36tq4KmR4ku1bBIQNtHMnUDUmxaolVrzHsak2cpyNKJ_JkknsZe2dYGF9Pn9lD-YKZ7_5_9_f52T_9_9_-39z3_9f___dv_-__-vjf_599n_v9fV_78_Kf9______-____________8A";
+/* Only Eulerian + No purposes */
+const TCFV2_DEFAULT_PENDING_DENIED = "CQN3nOXQN3nOXEBAAAENCZCAAAAAAAAAAAqII7QAQDOgAAAA.II7Nd_X__bX9n-_7_6ft0eY1f9_r37uQzDhfNs-8F3L_W_LwX32E7NF36tq4KmR4ku1bBIQNtHMnUDUmxaolVrzHsak2cpyNKJ_JkknsZe2dYGF9Pn9lD-YKZ7_5_9_f52T_9_9_-39z3_9f___dv_-__-vjf_599n_v9fV_78_Kf9______-____________8A";
+
 /**
  * Convert a {@link Dict} into a native JavaScript object
  *
@@ -70,6 +75,14 @@ const buildPayload = (data, context) => {
   if ( context.campaign?.term ) {
     utm.utm_term = context.campaign?.term;
   }
+  let gdpr_consent = eventProperties?.gdpr_consent ?? "";
+  if ( !gdpr_consent.length ) {
+    if ( data.consent === "granted" ) {
+      gdpr_consent = TCFV2_DEFAULT_GRANTED;
+    } else {
+      gdpr_consent = TCFV2_DEFAULT_PENDING_DENIED;
+    }
+  }
   return {
     "ereplay-platform"  : "edgee",
     "euidl"             : context.user.edgeeId,
@@ -86,6 +99,7 @@ const buildPayload = (data, context) => {
     "search"            : data.search ?? "",
     "title"             : data.title ?? "",
     "event_name"        : data.name ?? "",
+    gdpr_consent,
     ...eventProperties,
     ...utm
   };
