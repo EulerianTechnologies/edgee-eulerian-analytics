@@ -1,12 +1,12 @@
 /**
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeProtocolsDataCollection} EdgeeProtocolsDataCollection
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").EdgeeRequest} EdgeeRequest
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Dict} Dict
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Event} Event
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").PageData} PageData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").TrackData} TrackData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").UserData} UserData
- * @typedef {import("../types/interfaces/edgee-protocols-data-collection").Context} Context
+ * @typedef {import("../types/wit").dataCollection} EdgeeDataCollection
+ * @typedef {import("../types/wit").dataCollection.EdgeeRequest} EdgeeRequest
+ * @typedef {import("../types/wit").dataCollection.Dict} Dict
+ * @typedef {import("../types/wit").dataCollection.Event} Event
+ * @typedef {import("../types/wit").dataCollection.PageData} PageData
+ * @typedef {import("../types/wit").dataCollection.TrackData} TrackData
+ * @typedef {import("../types/wit").dataCollection.UserData} UserData
+ * @typedef {import("../types/wit").dataCollection.Context} Context
  */
 
 /* All vendors + All purposes */
@@ -105,7 +105,7 @@ const buildPayload = (data, context) => {
   };
 };
 
-/** @type {EdgeeProtocolsDataCollection} */
+/** @type {EdgeeDataCollection} */
 export const dataCollection = {
 
   /**
