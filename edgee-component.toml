@@ -8,7 +8,8 @@ subcategory = "analytics"
 description = "Eulerian Analytics component allowing to integrate the Eulerian Marketing Platform : 100% privacy by design, data sovereignty, analytics, attribution, user segmentation & data activation."
 documentation = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
 repository = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
-wit-world-version = "0.5.0"
+language = "JavaScript"
+wit-version = "0.5.0"
 
 [component.build]
 command = "npm install && npm run generate && npm run build"
