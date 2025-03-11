@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "types": "./types/wit.d.ts",
   "scripts": {
-    "generate": "npx @bytecodealliance/jco types wit/ -o types/",
-    "build": "npx @bytecodealliance/jco componentize src/index.js --wit wit -o eulerian-analytics.wasm -n data-collection -d all",
+    "generate": "npx @bytecodealliance/jco types .edgee/wit -o types/",
+    "build": "npx @bytecodealliance/jco componentize src/index.js --wit .edgee/wit -o eulerian-analytics.wasm -n data-collection -d all",
     "test": "mocha",
     "coverage": "c8 --src js --all -r text -r text-summary npm test"
   },
