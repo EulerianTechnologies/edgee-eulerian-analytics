@@ -65,6 +65,12 @@ To ask a question, suggest a feature, or provide feedback, [contact me directly]
 
 *Thank you to everyone who shares feedback for Eulerian Analytics!*
 
+**20250313**
+
+* Update description
+* Add logo
+* Merge PR#3
+
 **20250306**
 
 * Manage IAB TCFv2 TCString through properties.gdpr_consent
