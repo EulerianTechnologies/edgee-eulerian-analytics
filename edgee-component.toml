@@ -13,7 +13,7 @@ You can start with a [free account](https://eulerian.io)
 documentation = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
 repository = "https://github.com/EulerianTechnologies/edgee-eulerian-analytics"
 language = "JavaScript"
-wit-version = "0.5.0"
+wit-version = "1.0.0"
 icon-path = "eulerian-analytics.png"
 
 [component.build]
