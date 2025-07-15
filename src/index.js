@@ -41,7 +41,7 @@ export const convertDict = (dict) => {
  */
 const buildEdgeeRequest = (payload, trackingTarget, website) => ({
   method: 'POST',
-  url: `https://${trackingTarget}.eulerian.net/collector/${website}/`,
+  url: `https://${trackingTarget}/collector/${website}/`,
   headers: [
     ['X-Forwarded-For', payload['ereplay-ip'] ],
     ['User-Agent', payload['ereplay-ua'] ],
