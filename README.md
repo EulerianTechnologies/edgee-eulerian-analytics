@@ -42,7 +42,7 @@ privacy rules.
 5. Save and you are all setup !
 
 Example :
-- trackingTarget : can be io1 if your tracking domain is io1.eulerian.net
+- trackingTarget : can be io1.eulerian.net for example
 - website : can be my-website for example
 
 After a couple of minutes, you can log into your Eulerian Analytics account and view your site statistics.
